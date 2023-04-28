@@ -1,0 +1,36 @@
+version: 1.0.0
+id: sd-template-strapi
+name: Strapi - SuperDev Template
+resources:
+  - type: github-service
+    repo-user: SuperDevCloud
+    repo-name: strapi
+    branch: master
+    copy-repo: true
+    port: 1337
+    health-path: /
+    output-env-name:
+      endpoint-sd-url: STRAPI_URL
+      endpoint-port: STRAPI_PORT
+      health-path: STRAPI_HEALTH_PATH
+    input-env-internal:
+      - DATABASE_HOST
+      - DATABASE_PORT
+      - DATABASE_DATABASE_NAME
+      - DATABASE_USER
+      - DATABASE_PASSWORD
+    input-env-user-input:
+      - CLOUDINARY_ACCOUNT_NAME
+      - CLOUDINARY_API_KEY
+      - CLOUDINARY_API_SECRET
+    input-env-user-input-pre-filled-random:
+      - APP_KEYS
+      - API_TOKEN_SALT
+      - ADMIN_JWT_SECRET
+  - type: pg-db
+    output-env-name:
+      database-username: DATABASE_USER
+      database-password: DATABASE_PASSWORD
+      database-host: DATABASE_HOST
+      database-port: DATABASE_PORT
+      database-name: DATABASE_DATABASE_NAME
