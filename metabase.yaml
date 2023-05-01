@@ -1,0 +1,29 @@
+version: 1.0.0
+id: metabase
+name: Metabase - SuperDev Template
+resources:
+  - type: docker-service
+    docker-image-repo: metabase
+    docker-image-name: metabase
+    docker-image-tag: latest
+    port: 3000
+    health-path: /setup/
+    output-env-name:
+      endpoint-sd-url: METABASE_URL
+      endpoint-port: METABASE_PORT
+      health-path: METABASE_HEALTH_PATH
+    input-env-internal:
+      - MB_DB_TYPE
+      - MB_DB_DBNAME
+      - MB_DB_PORT
+      - MB_DB_USER
+      - MB_DB_PASS
+      - MB_DB_HOST
+  - type: pg-db
+    output-env-name:
+      database-type: MB_DB_TYPE
+      database-username: MB_DB_USER
+      database-password: MB_DB_PASS
+      database-host: MB_DB_HOST
+      database-port: MB_DB_PORT
+      database-name: MB_DB_DBNAME

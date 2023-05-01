@@ -1,5 +1,5 @@
 version: 1.0.0
-id: sd-template-strapi
+id: strapi
 name: Strapi - SuperDev Template
 resources:
   - type: github-service
