@@ -16,7 +16,7 @@ resources:
     input-env-internal:
       - DATABASE_HOST
       - DATABASE_PORT
-      - DATABASE_DATABASE_NAME
+      - DATABASE_DB_NAME
       - DATABASE_USER
       - DATABASE_PASSWORD
     input-env-user-input:
@@ -33,4 +33,4 @@ resources:
       database-password: DATABASE_PASSWORD
       database-host: DATABASE_HOST
       database-port: DATABASE_PORT
-      database-name: DATABASE_DATABASE_NAME
+      database-name: DATABASE_DB_NAME
