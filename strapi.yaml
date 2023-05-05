@@ -26,6 +26,7 @@ resources:
     input-env-user-input-pre-filled-random:
       - APP_KEYS
       - API_TOKEN_SALT
+      - JWT_SECRET
       - ADMIN_JWT_SECRET
   - type: pg-db
     output-env-name:
