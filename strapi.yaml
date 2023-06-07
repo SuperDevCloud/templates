@@ -20,14 +20,14 @@ resources:
       - DATABASE_USER
       - DATABASE_PASSWORD
     input-env-user-input:
-      - CLOUDINARY_ACCOUNT_NAME
-      - CLOUDINARY_API_KEY
-      - CLOUDINARY_API_SECRET
+      - CLOUDINARY_ACCOUNT_NAME: Cloudinary account name where media files will be stored
+      - CLOUDINARY_API_KEY: Cloudinary API key name where media files will be stored
+      - CLOUDINARY_API_SECRET: Cloudinary API secret name where media files will be stored
     input-env-user-input-pre-filled-random:
-      - APP_KEYS
-      - API_TOKEN_SALT
-      - JWT_SECRET
-      - ADMIN_JWT_SECRET
+      - APP_KEYS: App key for strapi
+      - API_TOKEN_SALT: Secret salt for securing strapi APIs
+      - JWT_SECRET: Java web token for strapi APIs
+      - ADMIN_JWT_SECRET: Java web token for strapi Admin APIs
   - type: pg-db
     output-env-name:
       database-username: DATABASE_USER
