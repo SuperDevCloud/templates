@@ -1,0 +1,15 @@
+version: 1.0.0
+id: flask
+name: Flask - SuperDev Template
+resources:
+  - type: github-service
+    repo-user: SuperDevCloud
+    repo-name: flask
+    branch: master
+    copy-repo: true
+    port: 5000
+    health-path: /
+    output-env-name:
+      endpoint-sd-url: FLASK_URL
+      endpoint-port: FLASK_PORT
+      health-path: FLASK_HEALTH_PATH
