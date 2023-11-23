@@ -3,8 +3,8 @@ id: metabase
 name: Metabase - SuperDev Template
 resources:
   - type: docker-service
-    docker-image-repo: superdevcloud
-    docker-image-name: metabase-with-clickhouse
+    docker-image-repo: metabase
+    docker-image-name: metabase
     docker-image-tag: latest
     port: 3000
     health-path: /setup/
