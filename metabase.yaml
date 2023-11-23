@@ -3,7 +3,7 @@ id: metabase
 name: Metabase - SuperDev Template
 resources:
   - type: docker-service
-    docker-image-repo: metabase
+    docker-image-repo: superdevcloud
     docker-image-name: metabase
     docker-image-tag: latest
     port: 3000
